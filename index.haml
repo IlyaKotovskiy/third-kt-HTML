@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+%html(lang="en")
+    %head
+        %meta(charset="UTF-8")/
+        %meta(http-equiv="X-UA-Compatible" content="IE=edge")/
+        %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        %title Document
+        %link{ :rel => 'stylesheet', :href => 'styles/style.css' }
+    %body
+        %header.header
+            .container
+                %nav.header__nav
+                    %a.header__logo{ :href => '#' } LOGO
+                    %ul.header__list
+                        - (1..3).each do |i|
+                            %li.header__item
+                                %a{ :href => '#' } Page #{i}
+        %section.hero
+            .container{ :style => 'height: 100%; display: flex; justify-content: center; align-items: center' }
+                .hero-wrap
+                    %h1.hero-wrap__title DREAM HOME
+                    %p.hero-wrap__desc We take a look at four real estate search services to help you in that endeavor.
+                    %a.hero-wrap__btn{ :href => '#' } Read more
+        %footer.footer
+            .container
+                %p.footer__copyright Made Ilya Kotovskiy 2P1
